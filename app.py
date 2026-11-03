@@ -10,7 +10,7 @@ def home():
     return jsonify({
         "application": "Flask CI/CD Demo",
         "version": VERSION,
-        "message": "Application deployed successfully"
+        "message": "Version updated through GitHub webhook"
     })
 
 @app.route("/health")
