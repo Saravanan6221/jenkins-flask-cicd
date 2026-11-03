@@ -28,11 +28,15 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                sh '. .venv/bin/activate && pytest -v'
-            }
-        }
+       stage('Test') {
+    steps {
+        sh '''
+            echo "Running Flask application tests"
+            export PYTHONPATH="$WORKSPACE"
+            .venv/bin/python -m pytest -v -p no:cacheprovider
+        '''
+    }
+}
 
         stage('Docker Image Build') {
             steps {
