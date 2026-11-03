@@ -7,8 +7,8 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = 'YOUR_DOCKERHUB_USERNAME/jenkins-flask-app'
-        EC2_HOST = 'YOUR_APPLICATION_EC2_PUBLIC_IP'
+        IMAGE_NAME = 'saravanan6221/jenkins-flask-app'
+        EC2_HOST = '34.232.46.30'
         EC2_USER = 'ubuntu'
         APP_HOST_PORT = '80'
     }
